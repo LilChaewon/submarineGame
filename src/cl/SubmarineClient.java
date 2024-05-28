@@ -11,7 +11,7 @@ import java.net.*;
 
 class SubmarineClient extends JFrame {
 	static int inPort = 9999;
-	static String address = "192.168.123.101";
+	static String address = "localhost";
 	static public PrintWriter out;
 	static public BufferedReader in;
 	static String userName;
