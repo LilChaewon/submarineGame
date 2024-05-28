@@ -17,8 +17,8 @@ class SubmarineClient extends JFrame {
 	static String userName;
 	boolean gameStarted = false;
 
-	static int num_mine = 10; // Set default values
-	static int width = 10; // Set default values
+	static int num_mine = 10;
+	static int width = 10;
 	static int score = 0;
 	static public Socket socket;
 	public int[][] clientMap;
@@ -122,7 +122,7 @@ class SubmarineClient extends JFrame {
 				setupConnection();
 				startButton.setEnabled(false);
 				nameField.setEnabled(false);
-				gameStarted = true; // Add this line
+				gameStarted = true;
 			} else {
 				JOptionPane.showMessageDialog(SubmarineClient.this, "Please enter your name.", "Error", JOptionPane.ERROR_MESSAGE);
 			}
@@ -175,7 +175,7 @@ class SubmarineClient extends JFrame {
 						statistics.append(in.readLine()).append("\n");
 					}
 					messageArea.append("\n" + statistics.toString());
-					// 게임 오버 메시지와 통계를 JOptionPane으로도 출력
+					// 게임 오버 메시지와 통계를 출력
 					JOptionPane.showMessageDialog(SubmarineClient.this, statistics.toString(), "Game Over", JOptionPane.INFORMATION_MESSAGE);
 					System.exit(0);
 				}
