@@ -53,7 +53,7 @@ class SubmarineClient extends JFrame {
         p0.add(nameField);
 
         p0.add(new JLabel("Enter Server IP:"));
-        ipField = new JTextField("192.168.",10);
+        ipField = new JTextField("localhost",10);
         p0.add(ipField);
 
         startButton = new JButton("Start Game");
@@ -165,10 +165,10 @@ class SubmarineClient extends JFrame {
                     int result = Integer.parseInt(msg);
                     if (result >= 0) {
                         score++;
-                        b.setText("Hit");
+                        b.setText("O");
                         b.setBackground(Color.GREEN);
                     } else {
-                        b.setText("Miss");
+                        b.setText("X");
                         b.setBackground(Color.RED);
                     }
                     statusLabel.setText("Score: " + score + " / " + num_mine);

@@ -42,7 +42,7 @@ public class SubmarineServer {
 		// 상단 패널
 		JPanel topPanel = new JPanel();
 		topPanel.setLayout(new FlowLayout());
-		topPanel.setBackground(Color.CYAN);
+		topPanel.setBackground(Color.GRAY);
 		topPanel.add(new JLabel("Submarine Detection Game"));
 
 		// 중앙 바둑판 패널
@@ -201,7 +201,7 @@ public class SubmarineServer {
 
 			userName = in.readLine();
 			System.out.println(userName + " joins from  " + socket.getInetAddress());
-			send("Wait for other player..");
+			send("환영합니다");
 		}
 
 		@Override
@@ -221,6 +221,9 @@ public class SubmarineServer {
 					}
 				}
 			} catch (IOException e) {
+				appendText(userName + " has left the game");
+			} finally {
+				endGame();
 			}
 		}
 
