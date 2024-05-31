@@ -188,7 +188,8 @@ class SubmarineClient extends JFrame {
                     System.exit(0);
                 }
             } catch (Exception e1) {
-                e1.printStackTrace();
+                JOptionPane.showMessageDialog(SubmarineClient.this, "Server connection lost. Game will exit.", "Error", JOptionPane.ERROR_MESSAGE);
+                System.exit(1);
             }
             playerTurn = false; // 턴 종료
         }
