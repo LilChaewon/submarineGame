@@ -130,7 +130,7 @@ class SubmarineClient extends JFrame {
                 setupConnection();
                 startButton.setEnabled(false);
                 nameField.setEnabled(false);
-                gameStarted = true; // Add this line
+                gameStarted = true;
             } else {
                 JOptionPane.showMessageDialog(SubmarineClient.this, "Please enter your name.", "Error", JOptionPane.ERROR_MESSAGE);
             }
